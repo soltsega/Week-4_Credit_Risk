@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  ml-notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+    environment:
+      - JUPYTER_TOKEN=your_secure_token_here
