@@ -7,7 +7,15 @@ venv/
 dist/
 build/
 .dvc/config
-.dvc/config
 data/raw/raw_data.csv.dvc
 data/raw/Xente_Variable_Definitions (1).csv
 .dvc/config
+.dvc/cache/files/md5/17/2a6c2400e07277542fb625121c8dda
+.dvc/tmp/btime
+.dvc/tmp/rwlock.lock
+data/raw/raw_data.csv.dvc
+.dvc/tmp/lock
+.dvc/tmp/rwlock
+data/raw/raw_data.csv
+data/raw/Xente_Variable_Definitions (1).csv
+.dvc/config.local
