@@ -104,6 +104,21 @@ credit-risk-model/
 │   └── api/                   # Deployment
 └── tests/                     # Unit tests
 ```
+## Basic requirements
+# Core
+- pandas>=1.3.0
+- numpy>=1.21.0
+- scikit-learn>=1.0.0
+- jupyter>=1.0.0
+
+# Visualization
+- matplotlib>=3.4.0
+- seaborn>=0.11.0
+- plotly>=5.0.0
+
+# ML
+- xgboost>=1.5.0
+- imbalanced-learn>=0.8.0
 
 ## 🛠 Technical Implementation
 
@@ -177,9 +192,12 @@ credit-risk-model/
     jupyter notebook notebooks/eda.ipynb
     ```
 
+## 👥 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 ## 📝 License
 
-  - MIT License
+This project is licensed under the MIT License.
 
 *This challenge is part of the 10 Academy AI Mastery Program - Week 4 (Dec 10-16, 2025)*
 
