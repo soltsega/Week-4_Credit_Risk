@@ -6,3 +6,8 @@ venv/
 .venv/
 dist/
 build/
+.dvc/config
+.dvc/config
+data/raw/raw_data.csv.dvc
+data/raw/Xente_Variable_Definitions (1).csv
+.dvc/config
