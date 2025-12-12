@@ -6,6 +6,10 @@ venv/
 .venv/
 dist/
 build/
+.dvc/config
+data/raw/raw_data.csv.dvc
+data/raw/Xente_Variable_Definitions (1).csv
+.dvc/config
 .dvc/cache/files/md5/17/2a6c2400e07277542fb625121c8dda
 .dvc/tmp/btime
 .dvc/tmp/rwlock.lock
