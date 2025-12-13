@@ -25,3 +25,4 @@ data/processed/rfm_segments.csv
 data/processed/features/customer_rfm_segments_20251213_160220.csv
 data/processed/features/customer_rfm_segments_20251213_160059.csv
 data/processed/features/customer_rfm_segments_20251213_160239.csv
+outputs/rfm_analysis_report.txt
