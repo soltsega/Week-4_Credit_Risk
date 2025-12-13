@@ -19,4 +19,3 @@ data/raw/raw_data.csv.dvc
 data/raw/raw_data.csv
 data/raw/Xente_Variable_Definitions (1).csv
 .dvc/config.local
-data/processed/processed_data.csv
