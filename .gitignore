@@ -27,3 +27,4 @@ data/processed/features/customer_rfm_segments_20251213_160059.csv
 data/processed/features/customer_rfm_segments_20251213_160239.csv
 outputs/rfm_analysis_report.txt
 data/processed/cleaned_transactions.csv
+models/preprocessor.pkl
