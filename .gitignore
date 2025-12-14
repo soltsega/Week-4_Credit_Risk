@@ -20,3 +20,14 @@ data/raw/raw_data.csv
 data/raw/Xente_Variable_Definitions (1).csv
 .dvc/config.local
 data/processed/processed_data.csv
+data/processed/customer_rfm_segments_20251213_160325.csv
+data/processed/rfm_segments.csv
+data/processed/features/customer_rfm_segments_20251213_160220.csv
+data/processed/features/customer_rfm_segments_20251213_160059.csv
+data/processed/features/customer_rfm_segments_20251213_160239.csv
+outputs/rfm_analysis_report.txt
+data/processed/cleaned_transactions.csv
+models/preprocessor.pkl
+data/processed/splits/test.csv.gz
+data/processed/splits/train.csv.gz
+data/processed/splits/val.csv.gz
