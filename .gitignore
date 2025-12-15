@@ -35,3 +35,11 @@ github_rebrics.txt
 .dvc/.gitignore
 .dvc/.gitignore
 .dvc/config
+data/processed/cluster_profiles.csv
+data/processed/customer_risk_labels.csv
+data/processed/customer_segments.csv
+data/processed/customers_with_risk_labels.csv
+data/processed/final_customer_data_with_risk.csv
+data/processed/rfm_clean.csv
+data/processed/rfm_processed.csv
+reports/figures/risk_distribution.png
