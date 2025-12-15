@@ -32,3 +32,6 @@ data/processed/splits/val.csv.gz
 models/preprocessor.pkl
 outputs/rfm_analysis_report.txt
 github_rebrics.txt
+.dvc/.gitignore
+.dvc/.gitignore
+.dvc/config
