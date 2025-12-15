@@ -31,3 +31,4 @@ data/processed/splits/train.csv.gz
 data/processed/splits/val.csv.gz
 models/preprocessor.pkl
 outputs/rfm_analysis_report.txt
+github_rebrics.txt
