@@ -40,3 +40,16 @@ data/processed/final_customer_data_with_risk.csv
 data/processed/rfm_processed.csv
 data/processed/rfm_clean.csv
 reports/figures/risk_distribution.png
+notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/tags/mlflow.user
+notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/tags/mlflow.runName
+notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/tags/mlflow.user
+notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/tags/mlflow.source.name
+notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/tags/mlflow.runName
+notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/tags/mlflow.source.type
+notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow.runName
+notebooks/preprocessor.joblib
+notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow.source.name
+notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow.source.type
+notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow.user
+notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/tags/mlflow.source.name
+notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/tags/mlflow.source.type
