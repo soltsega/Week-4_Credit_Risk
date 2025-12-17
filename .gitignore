@@ -40,3 +40,5 @@ data/processed/final_customer_data_with_risk.csv
 data/processed/rfm_processed.csv
 data/processed/rfm_clean.csv
 reports/figures/risk_distribution.png
+practice.cpp
+practice
