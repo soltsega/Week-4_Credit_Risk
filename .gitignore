@@ -62,3 +62,6 @@ data/splits/test.csv
 data/splits/val.csv
 data/splits/train.csv
 notebooks/best_model.joblib
+mlruns/697272388340863376/meta.yaml
+mlruns/0/meta.yaml
+notebooks/credit_risk_model_v1.joblib
