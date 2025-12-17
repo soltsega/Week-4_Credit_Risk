@@ -67,3 +67,5 @@ notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow
 data/splits/val.csv
 data/splits/train.csv
 data/splits/test.csv
+models/credit_risk_model_v1.joblib
+src/tests
