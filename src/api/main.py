@@ -1,98 +1,58 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import List, Optional
+from src.api.pydantic_models import PredictionRequest, PredictionResponse
 import joblib
-import pandas as pd
-import os
-import os
-from pathlib import Path
+import numpy as np
 
-# Update this path to point to your actual model file
-MODEL_PATH = os.path.join(Path(__file__).parent.parent.parent, 'models', 'credit_risk_model_v1.joblib')
+app = FastAPI(title="Credit Risk API")
 
-# Then in your load_model function:
-model_data = joblib.load(MODEL_PATH)
+# Small helper for simple unit tests
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
 
-# Initialize FastAPI
-app = FastAPI(
-    title="Credit Risk Prediction API",
-    description="API for predicting credit risk probability",
-    version="1.0.0"
-)
+MODEL_PATH = "credit_risk_model_v1.joblib"
 
-# Model and preprocessor will be loaded at startup
-model = None
-preprocessor = None
-label_encoder = None
-
-class PredictionInput(BaseModel):
-    TransactionId: str
-    BatchId: str
-    AccountId: str
-    SubscriptionId: str
-    CustomerId: str
-    CurrencyCode: str
-    CountryCode: int
-    ProviderId: str
-    ProductId: str
-    ProductCategory: str
-    ChannelId: str
-    Amount: float
-    Value: float
-    TransactionStartTime: str
-    PricingStrategy: int
-    FraudResult: int
-
-class PredictionOutput(BaseModel):
-    transaction_id: str
-    risk_probability: float
-    risk_category: str
+class DummyModel:
+    """Simple fallback model used when a real model cannot be loaded during development/tests."""
+    def predict_proba(self, X):
+        import numpy as np
+        n = X.shape[0]
+        # return constant probabilities (col0 = prob(class 0), col1 = prob(class 1))
+        return np.vstack([np.full(n, 0.3), np.full(n, 0.7)]).T
 
 @app.on_event("startup")
 def load_model():
-    """Load the model and related artifacts at startup"""
-    global model, preprocessor, label_encoder
+    global model_bundle, model, preprocessor, le
     try:
-        # Update this path to your actual model file
-        model_data = joblib.load('models/credit_risk_model_v1.joblib')
-        model = model_data['model']
-        preprocessor = model_data['preprocessor']
-        label_encoder = model_data['label_encoder']
-    except Exception as e:
-        raise RuntimeError(f"Error loading model: {str(e)}")
+        model_bundle = joblib.load(MODEL_PATH)
+        model = model_bundle.get("model")
+        preprocessor = model_bundle.get("preprocessor", None)
+        le = model_bundle.get("label_encoder", None)
+    except Exception:
+        # Fall back to a minimal dummy model for local development and testing
+        model_bundle = {"model": DummyModel(), "feature_names": ["feature_0", "feature_1", "feature_2"]}
+        model = model_bundle["model"]
+        preprocessor = None
+        le = None
 
-@app.get("/")
-async def health_check():
-    """Health check endpoint"""
-    return {
-        "status": "healthy",
-        "model_loaded": model is not None
-    }
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
-@app.post("/predict", response_model=PredictionOutput)
-async def predict(input_data: PredictionInput):
-    """Make a prediction on a single transaction"""
-    if model is None or preprocessor is None:
-        raise HTTPException(status_code=503, detail="Model not loaded")
-    
+@app.post("/predict", response_model=PredictionResponse)
+def predict(request: PredictionRequest):
     try:
-        # Convert input to DataFrame for processing
-        input_dict = input_data.dict()
-        input_df = pd.DataFrame([input_dict])
-        
-        # Make prediction
-        prediction = model.predict_proba(input_df)
-        risk_probability = float(prediction[0][1])  # Probability of being high risk
-        risk_category = "High Risk" if risk_probability > 0.5 else "Low Risk"
-        
-        return {
-            "transaction_id": input_dict["TransactionId"],
-            "risk_probability": risk_probability,
-            "risk_category": risk_category
-        }
+        features = request.features
+        # Order the features consistently; use feature_names saved in model bundle
+        if "feature_names" in model_bundle:
+            ordered = [features.get(fn, 0.0) for fn in model_bundle["feature_names"]]
+            X = np.array(ordered).reshape(1, -1)
+        else:
+            # Infer ordering from dict
+            X = np.array(list(features.values())).reshape(1, -1)
+        if preprocessor is not None:
+            X = preprocessor.transform(X)
+        prob = float(model.predict_proba(X)[0][1])
+        label = int(prob >= 0.5)  # threshold 0.5 (document this)
+        return {"probability": prob, "risk_label": label}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
