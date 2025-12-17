@@ -61,3 +61,4 @@ notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/meta.yaml
 data/splits/test.csv
 data/splits/val.csv
 data/splits/train.csv
+notebooks/best_model.joblib
