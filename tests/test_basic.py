@@ -1,4 +1,4 @@
-from my_package.main import greet
+from src.api.main import greet
 
 
 def test_greet():
