@@ -69,3 +69,6 @@ data/splits/train.csv
 data/splits/test.csv
 models/credit_risk_model_v1.joblib
 src/tests
+PROJECT_ANALYSIS_DOCUMENTATION.md
+MODEL_PERFORMANCE_ANALYSIS.md
+WEEK12_CAPSTONE_SUBMISSION.md
