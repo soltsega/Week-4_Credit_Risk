@@ -7,6 +7,7 @@
 **Track:** Artificial Intelligence Mastery - Week 12 Capstone  
 
 ---
+
 ## Which project have you selected for your capstone? *
 
 **Credit Risk Scoring Challenge (Week 4 KAIM)** - An end-to-end machine learning system that predicts customer credit risk for Bati Bank's buy-now-pay-layer (BNPL) service using eCommerce transaction data.
