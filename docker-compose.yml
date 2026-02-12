@@ -9,3 +9,12 @@ services:
       - .:/app
     environment:
       - JUPYTER_TOKEN=your_secure_token_here
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1

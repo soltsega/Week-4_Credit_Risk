@@ -177,7 +177,29 @@ credit-risk-model/
   * [Basel II Capital Accord](https://www.bis.org/publ/bcbs128.pdf)
   * [Alternative Credit Scoring](https://www.hkma.gov.hk/media/eng/doc/key-functions/financial-infrastructure/alternative_credit_scoring.pdf)
   * [Xente Challenge Dataset](https://www.kaggle.com/datasets/atwine/xente-challenge)
+## API Usage
 
+Run the API locally:
+
+```bash
+pip install -r requirements.txt
+uvicorn src.api.main:app --reload --port 8000
+```
+
+Predict example (curl):
+
+```bash
+curl -X POST "http://localhost:8000/predict" -H "Content-Type: application/json" -d \
+'{"features": {"feature_0": 0.5, "feature_1": 1.2, "feature_2": -0.2}}'
+```
+
+Response:
+
+```json
+{"probability": 0.7, "risk_label": 1}
+```
+
+---
 ## 🛠 Getting Started
 
 1.  Clone the repository
