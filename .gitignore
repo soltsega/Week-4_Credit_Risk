@@ -1,14 +1,20 @@
+# Virtual environments
+venv/
+.venv/
+credit_risk_env/
+env/
+.env/
+
+# Python cache
 __pycache__/
 *.pyc
 .pytest_cache/
-.env
-venv/
-.venv/
+
+# Build and distribution
 dist/
 build/
-.dvc/config
-data/raw/raw_data.csv.dvc
-data/raw/Xente_Variable_Definitions (1).csv
+
+# DVC
 .dvc/config
 .dvc/cache/files/md5/17/2a6c2400e07277542fb625121c8dda
 .dvc/tmp/btime
@@ -16,22 +22,21 @@ data/raw/Xente_Variable_Definitions (1).csv
 data/raw/raw_data.csv.dvc
 .dvc/tmp/lock
 .dvc/tmp/rwlock
+.dvc/config.local
+
+# Data files
 data/raw/raw_data.csv
 data/raw/Xente_Variable_Definitions (1).csv
-.dvc/config.local
 data/processed/processed_data.csv
 data/processed/cleaned_transactions.csv
 data/processed/customer_rfm_segments_20251213_160325.csv
 data/processed/features/customer_rfm_segments_20251213_160059.csv
-data/processed/features/customer_rfm_segments_20251213_160220.csv
 data/processed/rfm_segments.csv
+data/processed/features/customer_rfm_segments_20251213_160220.csv
 data/processed/features/customer_rfm_segments_20251213_160239.csv
 data/processed/splits/test.csv.gz
 data/processed/splits/train.csv.gz
 data/processed/splits/val.csv.gz
-models/preprocessor.pkl
-outputs/rfm_analysis_report.txt
-github_rebrics.txt
 data/processed/cluster_profiles.csv
 data/processed/customer_risk_labels.csv
 data/processed/customer_segments.csv
@@ -39,34 +44,46 @@ data/processed/customers_with_risk_labels.csv
 data/processed/final_customer_data_with_risk.csv
 data/processed/rfm_processed.csv
 data/processed/rfm_clean.csv
-reports/figures/risk_distribution.png
-notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/tags/mlflow.user
-notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/tags/mlflow.source.type
-notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/tags/mlflow.source.name
-notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/tags/mlflow.runName
-notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/tags/mlflow.user
-notebooks/mlruns/675144119365642279/c5f2cca2647044a1b3938d23ff9c93f1/meta.yaml
-notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/tags/mlflow.source.name
-notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/tags/mlflow.source.type
-notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/meta.yaml
-.gitignore
-notebooks/mlruns/675144119365642279/819916c6d4784f8e8656a6050e32966c/tags/mlflow.runName
-notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow.source.type
-notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow.source.name
-notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow.user
-notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/meta.yaml
-.gitignore
-notebooks/mlruns/675144119365642279/meta.yaml
-notebooks/mlruns/0/meta.yaml
-notebooks/best_model.joblib
-notebooks/credit_risk_model_v1.joblib
-notebooks/preprocessor.joblib
-mlruns/697272388340863376/meta.yaml
-mlruns/0/meta.yaml
-notebooks/mlruns/675144119365642279/5083070a73a84fb08863af94c25310cd/tags/mlflow.runName
+data/processed/final_customer_data_cleaned.csv
 data/splits/val.csv
 data/splits/train.csv
 data/splits/test.csv
+
+# Models
+models/preprocessor.pkl
 models/credit_risk_model_v1.joblib
-src/tests
+notebooks/best_model.joblib
+notebooks/credit_risk_model_v1.joblib
+notebooks/preprocessor.joblib
+*.joblib
+*.pkl
+
+# MLflow
+mlruns/
+notebooks/mlruns/
+
+# Reports and outputs
+outputs/rfm_analysis_report.txt
+reports/figures/risk_distribution.png
+
+# Documentation
 documentation/WEEK12_CAPSTONE_SUBMISSION.md
+github_rebrics.txt
+
+# Tests
+src/tests
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+documentation/DAY1_PROGRESS_SUMMARY.md
+documentation/RUBRIC_ANALYSIS_RISK_ASSESSMENT.md
+documentation/INTERIM_DELIVERABLES.md
+documentation/WEEK12_TODO_LIST.md
+unittests.py
