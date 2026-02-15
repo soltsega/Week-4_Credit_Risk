@@ -108,3 +108,4 @@ documentation/INTERIM_SUBMISSION_REPORT.md
 .gitignore
 src/pyproject.toml
 scripts/.flake8
+src/generate_report_visualizations.py
