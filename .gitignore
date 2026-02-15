@@ -91,3 +91,11 @@ INTERIM_SUBMISSION_STATUS.md
 PROJECT_PROGRESS_ANALYSIS.md
 SECOND_INTERIM_STATUS.md
 SUBMISSION_INSTRUCTIONS.md
+src/simple_partial_dependence.py
+src/create_partial_dependence.py
+src/fix_partial_dependence.py
+partial_dependence.png
+partial_dependence.png
+feature_effect_analysis.png
+partial_dependence.png
+partial_dependence.png
