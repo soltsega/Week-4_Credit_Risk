@@ -1,0 +1,128 @@
+{
+  "model_type": "RandomForestClassifier",
+  "feature_count": 21,
+  "class_count": 3,
+  "explainability_methods": [
+    "feature_importance",
+    "performance_analysis"
+  ],
+  "business_metrics": {
+    "classification_report": {
+      "High Risk": {
+        "precision": 0.22164295821851493,
+        "recall": 0.7443721860930466,
+        "f1-score": 0.34157819225251074,
+        "support": 3998.0
+      },
+      "Low Risk": {
+        "precision": 0.09405827024546914,
+        "recall": 0.7295373665480427,
+        "f1-score": 0.1666327982117456,
+        "support": 562.0
+      },
+      "Medium Risk": {
+        "precision": 0.9955456570155902,
+        "recall": 0.09201948809442119,
+        "f1-score": 0.1684673366834171,
+        "support": 14573.0
+      },
+      "accuracy": 0.24706005331103328,
+      "macro avg": {
+        "precision": 0.4370822951598581,
+        "recall": 0.5219763469118368,
+        "f1-score": 0.2255594423825578,
+        "support": 19133.0
+      },
+      "weighted avg": {
+        "precision": 0.8073525403503775,
+        "recall": 0.24706005331103328,
+        "f1-score": 0.2045864079186733,
+        "support": 19133.0
+      }
+    },
+    "confusion_matrix": "[[ 2976  1016     6]\n [  152   410     0]\n [10299  2933  1341]]",
+    "business_cost": "2067100",
+    "cost_breakdown": {
+      "FN_High Risk": "6000",
+      "FP_Low Risk": "15200",
+      "FP_Medium Risk": "1029900"
+    }
+  },
+  "model_explanations": {
+    "High Risk": {
+      "class": "High Risk",
+      "top_features": [
+        {
+          "feature": "Amount",
+          "importance": 0.30687337243294005
+        },
+        {
+          "feature": "Value",
+          "importance": 0.3063831462036999
+        },
+        {
+          "feature": "ProviderId_ProviderId_6",
+          "importance": 0.1137082157705731
+        },
+        {
+          "feature": "PricingStrategy",
+          "importance": 0.06876685131324006
+        },
+        {
+          "feature": "ProductCategory_financial_services",
+          "importance": 0.0468039448889113
+        }
+      ]
+    },
+    "Low Risk": {
+      "class": "Low Risk",
+      "top_features": [
+        {
+          "feature": "Amount",
+          "importance": 0.30687337243294005
+        },
+        {
+          "feature": "Value",
+          "importance": 0.3063831462036999
+        },
+        {
+          "feature": "ProviderId_ProviderId_6",
+          "importance": 0.1137082157705731
+        },
+        {
+          "feature": "PricingStrategy",
+          "importance": 0.06876685131324006
+        },
+        {
+          "feature": "ProductCategory_financial_services",
+          "importance": 0.0468039448889113
+        }
+      ]
+    },
+    "Medium Risk": {
+      "class": "Medium Risk",
+      "top_features": [
+        {
+          "feature": "Amount",
+          "importance": 0.30687337243294005
+        },
+        {
+          "feature": "Value",
+          "importance": 0.3063831462036999
+        },
+        {
+          "feature": "ProviderId_ProviderId_6",
+          "importance": 0.1137082157705731
+        },
+        {
+          "feature": "PricingStrategy",
+          "importance": 0.06876685131324006
+        },
+        {
+          "feature": "ProductCategory_financial_services",
+          "importance": 0.0468039448889113
+        }
+      ]
+    }
+  }
+}
