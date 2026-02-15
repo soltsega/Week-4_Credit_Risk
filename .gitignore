@@ -99,3 +99,12 @@ partial_dependence.png
 feature_effect_analysis.png
 partial_dependence.png
 partial_dependence.png
+documentation/DETAILED_INTERIM_REPORT.md
+documentation/HONEST_PROJECT_STATUS.md
+documentation/INTERIM_SUBMISSION_ACTUAL_STATUS.md
+documentation/PROGRESS_REPORT_CONTENT.md
+documentation/PROJECT_FINAL_ASSESSMENT.md
+documentation/INTERIM_SUBMISSION_REPORT.md
+.gitignore
+src/pyproject.toml
+scripts/.flake8
