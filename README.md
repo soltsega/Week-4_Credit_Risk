@@ -1,16 +1,16 @@
-# 💳 Credit Risk Scoring Challenge: Production-Ready Implementation
+# Credit Risk Scoring Challenge: Production-Ready Implementation
 
-## 🎯 Project Overview
+## Project Overview
 
-This project has been transformed from an academic exercise into a **production-ready credit risk assessment system** for Bati Bank's buy-now-pay-later service. The system delivers **$1.8M annual savings** through advanced ML engineering and business optimization.
+This project has been transformed from an academic exercise into a production-ready credit risk assessment system for Bati Bank's buy-now-pay-later service. The system delivers $1.8M annual savings through advanced ML engineering and business optimization.
 
-**🏆 Key Achievements:**
+**Key Achievements:**
 - **Cost Reduction:** $3.9M → $2.1M (46% improvement)
 - **Risk Management:** 99.8% reduction in missed high-risk customers  
 - **Operational Efficiency:** 95% faster risk assessments
 - **ROI:** 240% annual return on investment
 
-## 🏦 Business Problem & Solution
+## Business Problem & Solution
 
 **Original Challenge:** Bati Bank loses $750K+ annually from bad loans while rejecting profitable customers due to inconsistent manual credit reviews.
 
@@ -18,33 +18,33 @@ This project has been transformed from an academic exercise into a **production-
 
 ---
 
-## 🚀 Week 12 Capstone Enhancements
+## Week 12 Capstone Enhancements
 
 ### **Critical Issues Resolved:**
 
-#### **🔥 Data Leakage Crisis (COMPLETED)**
+#### **Data Leakage Crisis (COMPLETED)**
 - **Issue:** Cluster feature with 98.58% importance causing artificial 97% accuracy
 - **Solution:** Removed Cluster feature, established realistic 76-77% baseline
 - **Impact:** Prevented production system failure
 
-#### **⚖️ Class Imbalance Resolution (COMPLETED)**
+#### **Class Imbalance Resolution (COMPLETED)**
 - **Issue:** Low Risk only 0.6% of dataset with 48% precision
 - **Solution:** SMOTE oversampling, balanced Random Forest, cost optimization
 - **Impact:** Business cost $3.9M → $2.1M
 
-#### **📊 Interactive Dashboards (COMPLETED)**
+#### **Interactive Dashboards (COMPLETED)**
 - **Delivered:** Streamlit dashboard with real-time predictions
 - **Features:** Manual assessment, model metrics, data analysis
 - **Impact:** 95% faster assessments for stakeholders
 
-#### **🔍 Model Explainability (COMPLETED)**
+#### **Model Explainability (COMPLETED)**
 - **Delivered:** Feature importance, fairness analysis, Basel II compliance
 - **Features:** Regulatory reporting, risk factor explanations
 - **Impact:** Audit-ready with full transparency
 
 ---
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 | Metric | Before | After | Improvement |
 |--------|--------|-------|-------------|
@@ -55,11 +55,11 @@ This project has been transformed from an academic exercise into a **production-
 
 ---
 
-## 🛠 Technical Architecture
+## Technical Architecture
 
 ### **Production System Components:**
 
-#### **📁 Data Pipeline**
+#### **Data Pipeline**
 ```python
 # Cleaned dataset (leakage-free)
 data/processed/final_customer_data_cleaned.csv
@@ -68,7 +68,7 @@ data/processed/final_customer_data_cleaned.csv
 - No data leakage
 ```
 
-#### **🤖 ML Models**
+#### **ML Models**
 ```python
 # Business-optimized models
 random_forest_weighted_balanced.joblib
@@ -77,7 +77,7 @@ random_forest_weighted_balanced.joblib
 - False Negative Rate: 0.15%
 ```
 
-#### **🌐 Production API**
+#### **Production API**
 ```python
 # FastAPI with monitoring
 src/enhanced_api.py
@@ -87,7 +87,7 @@ src/enhanced_api.py
 - Health monitoring
 ```
 
-#### **📊 Business Intelligence**
+#### **Business Intelligence**
 ```python
 # Executive dashboards
 src/dashboard_app.py (MVP)
@@ -99,26 +99,26 @@ src/advanced_dashboard.py (Executive)
 
 ---
 
-## 🎯 Business Impact Quantified
+## Business Impact Quantified
 
-### **💰 Financial Impact:**
+### **Financial Impact:**
 - **Annual Savings:** $1,832,900 (46% cost reduction)
 - **ROI:** 240% annual return
 - **Risk Reduction:** 99.8% fewer missed high-risk customers
 
-### **⚡ Operational Impact:**
+### **Operational Impact:**
 - **Assessment Speed:** 2-3 days → <5 minutes
 - **Decision Quality:** Consistent, data-driven risk scores
 - **Scalability:** Real-time processing capability
 
-### **📋 Regulatory Compliance:**
+### **Regulatory Compliance:**
 - **Basel II Ready:** Complete compliance framework
 - **Explainability:** Full feature importance and risk factor documentation
 - **Audit Trail:** Comprehensive logging and monitoring
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### **1. Environment Setup**
 ```bash
@@ -150,7 +150,7 @@ streamlit run src/advanced_dashboard.py
 
 ---
 
-## 📊 Model Performance Analysis
+## Model Performance Analysis
 
 ### **Feature Importance Rankings:**
 1. **Amount** (30.7%) - Transaction amount impact
@@ -166,7 +166,7 @@ streamlit run src/advanced_dashboard.py
 
 ---
 
-## 🔧 API Endpoints
+## API Endpoints
 
 ### **Core Endpoints:**
 ```python
@@ -199,7 +199,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 ---
 
-## 📈 Business Intelligence Features
+## Business Intelligence Features
 
 ### **Dashboard Capabilities:**
 - **Real-time Assessment:** Manual transaction evaluation
@@ -216,29 +216,29 @@ curl -X POST "http://localhost:8000/predict" \
 
 ---
 
-## 🏆 Project Success Metrics
+## Project Success Metrics
 
 ### **Technical Excellence:**
-- ✅ **Data Integrity:** Critical leakage issue resolved
-- ✅ **Model Performance:** 71.3% ROC-AUC with business optimization
-- ✅ **Production Ready:** Complete API with monitoring
-- ✅ **Explainability:** Regulatory compliant with full documentation
+- **Data Integrity:** Critical leakage issue resolved
+- **Model Performance:** 71.3% ROC-AUC with business optimization
+- **Production Ready:** Complete API with monitoring
+- **Explainability:** Regulatory compliant with full documentation
 
 ### **Business Value:**
-- ✅ **Cost Reduction:** $1.8M annual savings quantified
-- ✅ **Risk Management:** 99.8% reduction in missed high-risk customers
-- ✅ **Operational Efficiency:** 95% faster assessments
-- ✅ **ROI Achievement:** 240% annual return
+- **Cost Reduction:** $1.8M annual savings quantified
+- **Risk Management:** 99.8% reduction in missed high-risk customers
+- **Operational Efficiency:** 95% faster assessments
+- **ROI Achievement:** 240% annual return
 
 ### **Portfolio Value:**
-- ✅ **Finance Sector Ready:** Complete credit risk assessment system
-- ✅ **Stakeholder Tools:** Executive dashboards with business intelligence
-- ✅ **Professional Documentation:** Production-grade specifications
-- ✅ **Competitive Advantage:** Advanced ML engineering demonstration
+- **Finance Sector Ready:** Complete credit risk assessment system
+- **Stakeholder Tools:** Executive dashboards with business intelligence
+- **Professional Documentation:** Production-grade specifications
+- **Competitive Advantage:** Advanced ML engineering demonstration
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 credit-risk-model/
@@ -253,13 +253,12 @@ credit-risk-model/
 ├── models/                      # Trained models
 │   └── random_forest_weighted_balanced.joblib
 ├── *.png                        # Visualizations and explainability
-├── README_ENHANCED.md           # Professional documentation
 └── requirements.txt             # Dependencies
 ```
 
 ---
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 ### **Short-term (1-3 months):**
 - **Model Performance:** ROC-AUC improvement to >80%
@@ -273,10 +272,10 @@ credit-risk-model/
 
 ---
 
-## 📞 Contact & Repository
+## Contact & Repository
 
 **GitHub Repository:** https://github.com/soltsega/Week-4_Credit_Risk.git  
-**Project Status:** ✅ Production Ready  
+**Project Status:** Production Ready  
 **Business Impact:** $1.8M Annual Savings  
 **Technical Quality:** Enterprise-Grade System  
 

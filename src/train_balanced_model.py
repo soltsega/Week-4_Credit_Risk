@@ -216,7 +216,6 @@ def analyze_business_metrics(results, class_names):
         # Class-wise performance
         report = classification_report(result['y_test'], result['predictions'], 
                                     target_names=class_names, output_dict=True)
-        
         print("Class-wise Performance:")
         for class_name in class_names:
             precision = report[class_name]['precision']
