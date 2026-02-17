@@ -15,7 +15,7 @@ Bati Bank faced a critical dual crisis:
 - **2-3 day processing time** creating competitive disadvantage
 
 ### **Solution Delivered**
-End-to-end ML system with **$1.8M annual savings** and **95% faster risk assessments**
+End-to-end ML system with **$1.8M annual savings**, **95% faster risk assessments**, and **complete regulatory compliance**
 
 ---
 
@@ -100,6 +100,7 @@ End-to-end ML system with **$1.8M annual savings** and **95% faster risk assessm
 - Model performance comparison across all algorithms
 - Risk distribution analysis and customer segmentation
 - Interactive ROI calculator for business scenarios
+- **Model Explainability:** Individual prediction explanations with regulatory compliance
 
 ---
 
@@ -201,6 +202,6 @@ End-to-end ML system with **$1.8M annual savings** and **95% faster risk assessm
 
 **Questions & Discussion**
 
-*This project demonstrates transformation of academic ML exercise into production-ready financial technology with quantified business impact and regulatory compliance.*
+*This project demonstrates transformation of academic ML exercise into production-ready financial technology with quantified business impact, regulatory compliance, and complete model explainability.*
 
 **Ready for Production Deployment** ✅
