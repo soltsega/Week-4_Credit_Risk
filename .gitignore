@@ -109,3 +109,5 @@ documentation/INTERIM_SUBMISSION_REPORT.md
 src/pyproject.toml
 scripts/.flake8
 src/generate_report_visualizations.py
+DASHBOARD_EVIDENCE.md
+CONCISE_EVIDENCE.md
